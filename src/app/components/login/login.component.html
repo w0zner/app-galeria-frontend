@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="content-login col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" autocomplete="off">
+      <mat-form-field class="col-xs-12">
+        <input matInput type="text" name="usuario" formControlName="usuario" autofocus>
+        <mat-error *ngIf="loginForm.get('usuario')?.hasError('required')">
+          El usuario es obligatorio
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-xs-12">
+        <input matInput type="password" name="password" formControlName="password" autofocus>
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+          El password es obligatorio
+        </mat-error>
+        <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+          La contraseña debe tener al menos 3 caracteres
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button class="btn-ingreso col-xs-12" color="primary" type="submit" [disabled]="loginForm.invalid">
+        Iniciar Sesión
+      </button>
+    </form>
+  </div>
+</div>
