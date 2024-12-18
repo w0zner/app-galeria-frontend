@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="content-login col-lg-3 col-md-4 col-sm-6 col-xs-12">
     <h2>Login</h2>
-    <form [formGroup]="loginForm" autocomplete="off">
+    <form [formGroup]="loginForm" autocomplete="off" (submit)="login()">
       <mat-form-field class="col-xs-12">
         <input matInput type="text" name="usuario" formControlName="usuario" autofocus>
         <mat-error *ngIf="loginForm.get('usuario')?.hasError('required')">
