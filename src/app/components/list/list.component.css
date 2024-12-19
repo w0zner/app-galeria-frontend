@@ -1,0 +1,39 @@
+.content{
+  padding: 50px;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  overflow-y: scroll;
+}
+
+.grilla{
+  padding: 4px;
+  border: 1px solid #fff;
+}
+
+.content-fotografia {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #333;
+}
+
+.fotografia {
+  height: 140px;
+  background-size: cover;
+  background-position: center center;
+  border: 1px solid #999;
+  border-bottom: none;
+}
+
+.datos{
+  height: 40px;
+  width: 100%;
+  font-size: 11px;
+  padding: 5px;
+  color: #eee;
+  border: 1px solid #999;
+  border-top: none;
+}

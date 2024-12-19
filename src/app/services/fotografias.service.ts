@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { GLOBAL } from './global';
 
@@ -14,5 +14,13 @@ export class FotografiasService {
 
   getAll() {
     return this.http.get(this.url + '/')
+  }
+
+  getAllAdmin() {
+    let headers=new HttpHeaders({
+      'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token') || ''),
+      'Content-type':'Application/json'
+    })
+    return this.http.get(this.url + '/admin', {headers: headers})
   }
 }

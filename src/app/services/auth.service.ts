@@ -39,11 +39,11 @@ export class AuthService {
   }
 
   reconfirmarAutenticacion(): Observable<any> {
-    let jsonUser= localStorage.getItem('user') || ''
-    let jsonToken= localStorage.getItem('token') || ''
+    const jsonUser= localStorage.getItem('user') || ''
+    const jsonToken= localStorage.getItem('token') || ''
     if(jsonUser !== '' && jsonToken !== '') {
-      let user= JSON.parse(jsonUser)
-      let token= JSON.parse(jsonToken)
+      const user= JSON.parse(jsonUser)
+      const token= JSON.parse(jsonToken)
       if(user && token) {
         return this.refreshToken(user, token).pipe(
           tap((response:any) => {
@@ -59,6 +59,10 @@ export class AuthService {
       }
     }
     return of(null);
+  }
+
+  getToken() {
+    return JSON.parse(localStorage.getItem('token') || '')
   }
 
   logout() {
