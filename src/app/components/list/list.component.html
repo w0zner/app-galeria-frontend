@@ -1,8 +1,8 @@
 <div class="content">
   <div class="grilla col-lg-2 col-md-3 col-sm-4" *ngFor="let foto of fotografias">
-    <div class="content-fotografias">
-      <div class="fotografias">
-
+    <div class="content-fotografias" [ngClass]="foto.activo==false?'content-fotografias-disabled':''">
+      <div class="fotografias" [style.background-image]="'url(' + url + foto.imagen +'/true)'">
+        <img [src]="url + foto.imagen +'/true'" alt="imagen">
       </div>
       <div class="datos">
         {{foto.numero}} - {{foto.nombre}}
