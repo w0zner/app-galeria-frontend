@@ -14,6 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { AdminComponent } from './components/admin/admin.component';
 import { ListComponent } from './components/list/list.component';
+import { NuevaFotografiaComponent } from './components/nueva-fotografia/nueva-fotografia.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { ListComponent } from './components/list/list.component';
     HomeComponent,
     LoginComponent,
     AdminComponent,
-    ListComponent
+    ListComponent,
+    NuevaFotografiaComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { ListComponent } from './components/list/list.component';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,41 @@
+<div class="content col-lg-3 col-md-4 col-sm-6 col-xs-12">
+  <h2>Agregar Fotografía</h2>
+  <form [formGroup]="fotografiaForm" (submit)="guardar()">
+    <mat-form-field class="col-xs-12">
+      <input matInput type="text" formControlName="nombre" required autofocus placeholder="Nombre">
+      <mat-error *ngIf="fotografiaForm.get('nombre')?.hasError('required')">
+        El nombre es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-xs-12">
+      <input matInput type="text" formControlName="descripcion"  placeholder="Descripción">
+    </mat-form-field>
+
+    <mat-form-field class="col-xs-12">
+      <input matInput type="text" formControlName="numero" placeholder="Número">
+    </mat-form-field>
+
+    <mat-form-field class="col-xs-12">
+      <input matInput type="text" formControlName="autor" placeholder="Autor">
+    </mat-form-field>
+
+    <mat-form-field class="col-xs-12">
+      <input matInput type="text" [value]="image_selected || 'Seleccione una imagen'" disabled>
+      <input #fileInput type="file" style="display: none;" (change)="selectFile($event)" placeholder="Imagen">
+      <button mat-mini-fab color="primary" matSuffix type="button" (click)="fileInput.click()"><mat-icon>attach_file</mat-icon></button>
+    </mat-form-field>
+
+    <div>
+      <mat-checkbox  color="primary" name="activo" formControlName="activo">Activo</mat-checkbox>
+    </div>
+
+    <div class="button-container">
+      <button mat-raised-button color="default" type="button" routerLink="['/admin/list']">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="fotografiaForm.invalid">Guardar</button>
+    </div>
+
+
+
+  </form>
+</div>

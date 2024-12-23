@@ -23,4 +23,8 @@ export class FotografiasService {
     })
     return this.http.get(this.url + '/admin', {headers: headers})
   }
+
+  guardar(fotografia: any) {
+    return this.http.post(this.url + '/guardar', fotografia)
+  }
 }
