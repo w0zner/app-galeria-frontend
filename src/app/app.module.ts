@@ -12,12 +12,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { AdminComponent } from './components/admin/admin.component';
+import { ListComponent } from './components/list/list.component';
+import { NuevaFotografiaComponent } from './components/nueva-fotografia/nueva-fotografia.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    ListComponent,
+    NuevaFotografiaComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

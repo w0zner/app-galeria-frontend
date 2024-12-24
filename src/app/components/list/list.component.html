@@ -1,0 +1,22 @@
+<div class="options">
+  <div class="add-fotografia" [routerLink]="['/admin/new']">
+    <mat-icon>add</mat-icon>
+  </div>
+</div>
+<div class="content">
+  <div class="grilla col-lg-2 col-md-3 col-sm-4" *ngFor="let foto of fotografias">
+    <div class="content-fotografia" [ngClass]="foto.activo==false?'content-fotografia-disabled':''">
+      <div class="fotografia" [style.background-image]="'url(' + url + foto.imagen +'/true)'">
+        <!-- <img [src]="url + foto.imagen +'/true'" alt="imagen"> -->
+      </div>
+      <div class="datos">
+        {{foto.numero}} - {{foto.nombre}}
+      </div>
+      <div class="fotografia-hover">
+        <div>
+          <mat-icon>create</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
