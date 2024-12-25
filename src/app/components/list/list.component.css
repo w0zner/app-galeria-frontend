@@ -26,6 +26,8 @@
 }
 
 .fotografia {
+  box-shadow: 0px 4px 10px rgba(209, 194, 194, 0.2);
+
   background-size: cover;
   background-position: center center;
   border-bottom: none;
@@ -57,9 +59,12 @@
   width: 100%;
   font-size: 11px;
   padding: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
   color: #eee;
-  border: 1px solid #999;
+  /*border: 1px solid #999;*/
   border-top: none;
+  box-shadow: 0px 4px 10px rgba(209, 194, 194, 0.2);
 }
 
 .fotografia-hover {

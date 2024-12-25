@@ -14,6 +14,6 @@ export class UploadService {
   subirArchivo(files: Array<File>, id: string) {
     let formData = new  FormData()
     formData.append('foto', files[0], files[0].name)
-    return this.http.post(this.url, formData)
+    return this.http.post(this.url + id, formData)
   }
 }

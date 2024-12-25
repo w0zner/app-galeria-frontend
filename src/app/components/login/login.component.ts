@@ -27,7 +27,7 @@ export class LoginComponent {
         this.router.navigateByUrl('/admin/list')
       },
       error: (err) => {
-        this.notificacionService.mensajeDeError(err)
+        this.notificacionService.notificacionDeError(err)
       }
     })
   }
