@@ -22,7 +22,7 @@
 
     <mat-form-field class="col-xs-12">
       <input matInput type="text" [value]="image_selected || 'Seleccione una imagen'" disabled>
-      <input #fileInput type="file" style="display: none;" (change)="selectFile($event)" placeholder="Imagen">
+      <input #fileInput type="file" style="display: none;" (change)="selectFile($event)" placeholder="Imagen" formControlName="imagen">
       <button mat-mini-fab color="primary" matSuffix type="button" (click)="fileInput.click()"><mat-icon>attach_file</mat-icon></button>
     </mat-form-field>
 

@@ -25,6 +25,10 @@ export class FotografiasService {
   }
 
   guardar(fotografia: any) {
-    return this.http.post(this.url + '/guardar', fotografia)
+    let headers=new HttpHeaders({
+      'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token') || ''),
+      'Content-type':'Application/json'
+    })
+    return this.http.post(this.url + '/guardar', fotografia, {headers: headers})
   }
 }

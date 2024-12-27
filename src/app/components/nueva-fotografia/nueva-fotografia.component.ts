@@ -19,12 +19,12 @@ export class NuevaFotografiaComponent {
   constructor(private fb: FormBuilder, private fotografiaService: FotografiasService, private uploadService: UploadService, private router:Router, private notificacionService: NotificacionService){
     this.fotografiaForm = this.fb.group({
       nombre: ['', [Validators.required]],
-      descripcion: [''],
-      imagen: [''],
-      numero: [''],
-      autor: [''],
-      activo: [],
-      usuario_creacion: ['Rodrigo'],
+      descripcion: ['', [Validators.required]],
+      imagen: ['', [Validators.required]],
+      numero: ['', [Validators.required]],
+      autor: ['', [Validators.required]],
+      activo: [false],
+      usuario_creacion: [''],
     })
   }
 
