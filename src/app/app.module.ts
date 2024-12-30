@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { AdminComponent } from './components/admin/admin.component';
 import { ListComponent } from './components/list/list.component';
-import { NuevaFotografiaComponent } from './components/nueva-fotografia/nueva-fotografia.component';
+import { FotografiaFormComponent } from './components/fotografia-form/fotografia-form.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
@@ -25,7 +25,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     LoginComponent,
     AdminComponent,
     ListComponent,
-    NuevaFotografiaComponent
+    FotografiaFormComponent
   ],
   imports: [
     BrowserModule,

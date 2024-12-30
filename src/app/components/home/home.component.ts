@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FotografiasService } from 'src/app/services/fotografias.service';
+import { GLOBAL } from 'src/app/services/global';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,11 @@ import { FotografiasService } from 'src/app/services/fotografias.service';
 })
 export class HomeComponent implements OnInit {
   fotografias: any[] = []
+  url: string=''
 
-  constructor(private fotografiasService: FotografiasService) {}
+  constructor(private fotografiasService: FotografiasService) {
+    this.url = GLOBAL.url + 'fotografias' + '/get-foto/'
+  }
 
   ngOnInit(): void {
     this.getFotografias()

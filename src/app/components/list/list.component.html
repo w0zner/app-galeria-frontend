@@ -13,7 +13,7 @@
         {{foto.numero}} - {{foto.nombre}}
       </div>
       <div class="fotografia-hover">
-        <div>
+        <div [routerLink]="['/admin/edit/', foto._id]">
           <mat-icon>create</mat-icon>
         </div>
       </div>

@@ -1,0 +1,35 @@
+.content-home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fotografia {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.fotografia-item {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.data-fotografia {
+  position: absolute;
+  left: 80px;
+  bottom: 120px;
+  right: 0px;
+  color: #fff;
+  z-index: 3;
+  font-size: 40px;
+  font-family: "Roboto-Regular";
+  max-width: 500px;
+}

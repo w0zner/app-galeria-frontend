@@ -1,10 +1,10 @@
-<div>
-  <ul *ngFor="let foto of fotografias">
-    <li >
+<div class="content-home">
+  <div class="fotografia" *ngFor="let foto of fotografias">
+    <div class="fotografia-item" [style.background-image]="'url(' + url + foto.imagen +'/false)'">
+
+    </div>
+    <div class="data-fotografia">
       {{foto.nombre}}
-    </li>
-    <li>
-      {{foto.activo}}
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
