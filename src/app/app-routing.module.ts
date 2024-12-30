@@ -8,7 +8,7 @@ import { authGuard } from './guards/auth.guard';
 import { FotografiaFormComponent } from './components/fotografia-form/fotografia-form.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: 'home/:num', component: HomeComponent},
   {path: 'admin', component: AdminComponent, canActivate: [authGuard],
     children: [
       {path: 'list', component: ListComponent},

@@ -33,3 +33,95 @@
   font-family: "Roboto-Regular";
   max-width: 500px;
 }
+
+.leer-mas {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-leer-mas {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.btn-leer-mas mat-icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  margin: auto;
+}
+
+.txt-leer-mas {
+  font-family: 'Roboto-ThinItalic';
+  margin: auto 15px;
+  color: #fff;
+}
+
+.linea-inferior {
+  margin: auto auto auto 0px;
+  height: 1px;
+  position: absolute;
+  left: 120px;
+  top: 18px;
+  right: 100px;
+  background: #fff;
+}
+
+.login {
+  position: absolute;
+  right: 55px;
+  top: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s linaer;
+  font-family: 'Roboto-Regular';
+}
+
+.login:hover {
+  transform: scale(1.2);
+}
+
+.content-arrow-nav {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+}
+
+.content-arrow-nav mat-icon {
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.content-arrow-nav div {
+  position: absolute;
+  color: rgb(15, 70, 216);
+  transition: all .2s linear;
+}
+
+.content-arrow-nav div:hover {
+  color: rgb(113, 170, 216);
+}
+
+.move-left {
+  left: 10px;
+}
+
+.move-right{
+  right: 10px;
+}
