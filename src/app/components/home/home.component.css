@@ -72,7 +72,7 @@
   position: absolute;
   left: 120px;
   top: 18px;
-  right: 100px;
+  right: 105px;
   background: #fff;
 }
 
@@ -83,7 +83,8 @@
   color: #fff;
   cursor: pointer;
   transition: all .2s linaer;
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto-ThinItalic';
+  font-weight: bold;
 }
 
 .login:hover {
@@ -124,4 +125,94 @@
 
 .move-right{
   right: 10px;
+}
+
+.ver-mas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(30, 30, 30, 0.8);
+  z-index: 6;
+}
+
+.ver-mas-detalle {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  font-family: 'Roboto-Thin';
+  font-size: 10px;
+  color: #fff;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+}
+
+.ver-mas-nombre {
+  font-family: 'Roboto-Thin';
+  font-size: 6em;
+  color: #fff;
+}
+
+.ver-mas-descripcion {
+  margin-top: 45px;
+  font-family: 'Roboto-Thin';
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.ver-mas-autor {
+  margin-top: 30px;
+  font-family: 'Roboto-Thin';
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.compartir {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.compartir *{
+  margin: 5px;
+}
+
+.compartir img{
+  width: 30px;
+  height: 30px;
+}
+
+.compartir div {
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+.compartir div:hover {
+  transform: scale(1.2);
+}
+
+.cerrar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.cerrar mat-icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  margin: auto;
 }

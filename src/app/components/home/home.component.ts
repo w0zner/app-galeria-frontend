@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   url: string=''
   fotoSeleccionada: any = {}
   num: any = null
+  verMas: boolean= false;
 
   constructor(private fotografiasService: FotografiasService, private route: ActivatedRoute) {
     this.url = GLOBAL.url + 'fotografias' + '/get-foto/'

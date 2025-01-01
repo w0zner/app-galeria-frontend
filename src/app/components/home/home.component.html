@@ -3,12 +3,12 @@
     <div class="fotografia-item"
     *ngIf="fotoSeleccionada.fotografia.numero==foto.numero"
     [style.background-image]="'url(' + url + foto.imagen +'/false)'">
-      <div class="data-fotografia">
+      <div class="data-fotografia" *ngIf="!verMas">
         {{foto.nombre}}
       </div>
 
       <div class="leer-mas">
-        <div class="btn-leer-mas">
+        <div class="btn-leer-mas"  (click)="verMas=!verMas">
           <mat-icon>add</mat-icon>
         </div>
         <div class="txt-leer-mas">Leer más</div>
@@ -25,5 +25,30 @@
   </div>
   <div class="move-right" *ngIf="fotoSeleccionada.siguiente" [routerLink]="['/home/', fotoSeleccionada.siguiente]">
     <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
+</div>
+
+<div class="ver-mas" *ngIf="verMas" >
+  <div class="ver-mas-detalle col-lg-6 col-md-6 col-xs-10">
+    <div class="ver-mas-nombre">
+      {{fotoSeleccionada.fotografia.nombre}}
+    </div>
+    <div class="ver-mas-descripcion">
+      {{fotoSeleccionada.fotografia.descripcion}}
+    </div>
+    <div class="ver-mas-autor">
+      {{fotoSeleccionada.fotografia.autor}}
+    </div>
+    <div class="compartir">
+      <div class="instagram">
+        <img src="../../../assets/images/instagram_64.png" alt="">
+      </div>
+      <div class="facebook">
+        <img src="../../../assets/images/facebook_64.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="cerrar" (click)="verMas=!verMas">
+    <mat-icon>close</mat-icon>
   </div>
 </div>
