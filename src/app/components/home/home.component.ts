@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Animations } from 'src/app/animations/animations';
 import { FotografiasService } from 'src/app/services/fotografias.service';
 import { GLOBAL } from 'src/app/services/global';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [Animations]
 })
 export class HomeComponent implements OnInit {
   fotografias: any[] = []
@@ -14,6 +16,10 @@ export class HomeComponent implements OnInit {
   fotoSeleccionada: any = {}
   num: any = null
   verMas: boolean= false;
+  fotoActual:number=0
+  direccion: any | null
+  currentPhotoIndex = 0;
+  lastDirection: 'left' | 'right' | 'void' = 'void';
 
   constructor(private fotografiasService: FotografiasService, private route: ActivatedRoute) {
     this.url = GLOBAL.url + 'fotografias' + '/get-foto/'
@@ -53,12 +59,37 @@ export class HomeComponent implements OnInit {
         console.log(this.fotoSeleccionada.siguiente);
         console.log(this.fotoSeleccionada.anterior);
 
-        console.log(this.fotoSeleccionada.fotografia)
+        this.moverFotografia(this.fotoSeleccionada.fotografia)
       },
       error: (error) => {
         console.error(error)
       }
     })
+  }
+
+  moverFotografia(fotografia: any) {
+    if(fotografia.numero > this.fotoActual){
+      this.direccion="right"
+    } else if(fotografia.numero < this.fotoActual){
+      this.direccion="left"
+    }
+
+    this.fotoActual=fotografia.numero
+  }
+
+  getState(index: number): string {
+    if (index === this.currentPhotoIndex) return this.lastDirection;
+    return 'void';
+  }
+
+  next() {
+    this.lastDirection = 'right';
+    this.currentPhotoIndex = this.fotoSeleccionada.siguiente
+  }
+
+  prev() {
+    this.lastDirection = 'left';
+    this.currentPhotoIndex = this.fotoSeleccionada.anterior
   }
 
 }
