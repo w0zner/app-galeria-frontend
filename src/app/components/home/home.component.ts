@@ -72,24 +72,12 @@ export class HomeComponent implements OnInit {
       this.direccion="right"
     } else if(fotografia.numero < this.fotoActual){
       this.direccion="left"
+    } else {
+      console.log('void')
+      this.direccion='void'
     }
 
     this.fotoActual=fotografia.numero
-  }
-
-  getState(index: number): string {
-    if (index === this.currentPhotoIndex) return this.lastDirection;
-    return 'void';
-  }
-
-  next() {
-    this.lastDirection = 'right';
-    this.currentPhotoIndex = this.fotoSeleccionada.siguiente
-  }
-
-  prev() {
-    this.lastDirection = 'left';
-    this.currentPhotoIndex = this.fotoSeleccionada.anterior
   }
 
 }

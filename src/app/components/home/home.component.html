@@ -1,9 +1,10 @@
 <div class="content-home">
-  <div class="fotografia" *ngFor="let foto of fotografias; let i = index">
+  <div class="fotografia" *ngFor="let foto of fotografias">
     <div class="fotografia-item"
-    [@mover-fotografia]="getState(i)"
+    [@mover-fotografia]="direccion"
     *ngIf="fotoSeleccionada.fotografia.numero==foto.numero"
     [style.background-image]="'url(' + url + foto.imagen +'/false)'">
+    {{direccion}}
       <div class="data-fotografia" *ngIf="!verMas">
         {{foto.nombre}}
       </div>
@@ -21,10 +22,10 @@
 </div>
 
 <div class="content-arrow-nav">
-  <div class="move-left" *ngIf="fotoSeleccionada.anterior" (click)="next()" [routerLink]="['/home/', fotoSeleccionada.anterior]">
+  <div class="move-left" *ngIf="fotoSeleccionada.anterior" [routerLink]="['/home/', fotoSeleccionada.anterior]">
     <mat-icon>keyboard_arrow_left</mat-icon>
   </div>
-  <div class="move-right" *ngIf="fotoSeleccionada.siguiente" (click)="prev()" [routerLink]="['/home/', fotoSeleccionada.siguiente]">
+  <div class="move-right" *ngIf="fotoSeleccionada.siguiente"  [routerLink]="['/home/', fotoSeleccionada.siguiente]">
     <mat-icon>keyboard_arrow_right</mat-icon>
   </div>
 </div>
