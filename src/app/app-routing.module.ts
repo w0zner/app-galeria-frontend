@@ -6,11 +6,13 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ListComponent } from './components/list/list.component';
 import { authGuard } from './guards/auth.guard';
 import { FotografiaFormComponent } from './components/fotografia-form/fotografia-form.component';
+import { PhotoSliderComponent } from './components/photo-slider/photo-slider.component';
 
 const routes: Routes = [
   {path: 'home/:num', component: HomeComponent},
   {path: 'admin', component: AdminComponent, canActivate: [authGuard],
     children: [
+      {path: 'slider', component: PhotoSliderComponent},
       {path: 'list', component: ListComponent},
       {path: 'new', component: FotografiaFormComponent},
       {path: 'edit/:id', component: FotografiaFormComponent}

@@ -1,10 +1,11 @@
 <div class="content-home">
   <div class="fotografia" *ngFor="let foto of fotografias">
     <div class="fotografia-item"
-    [@mover-fotografia]="direccion"
+    style="opacity: 1;"
+    [@slideAnimation]="direccion"
     *ngIf="fotoSeleccionada.fotografia.numero==foto.numero"
-    [style.background-image]="'url(' + url + foto.imagen +'/false)'">
-    {{direccion}}
+    [style.background-image]="'url(' + url + foto.imagen +'/false)'"
+    [class.active]="foto.numero === fotoActual">
       <div class="data-fotografia" *ngIf="!verMas">
         {{foto.nombre}}
       </div>

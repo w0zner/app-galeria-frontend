@@ -20,6 +20,14 @@
   background-size: cover;
   background-position: center center;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
+
+.fotografia-item.active{
+  opacity: 1;
 }
 
 .data-fotografia {

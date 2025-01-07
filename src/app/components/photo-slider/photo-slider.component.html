@@ -1,0 +1,10 @@
+<div class="slider">
+  <div class="photo-container" [@slideAnimation]="animationDirection">
+    <img *ngFor="let photo of photos; let i = index"
+         [src]="photo"
+         [class.active]="i === currentIndex" />
+  </div>
+
+</div>
+<button (click)="previous()">←</button>
+  <button (click)="next()">→</button>
