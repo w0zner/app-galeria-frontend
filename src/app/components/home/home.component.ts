@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   verMas: boolean= false;
   fotoActual:number=0
   direccion: any | null
-  currentPhotoIndex = 0;
-  lastDirection: 'left' | 'right' | 'void' = 'void';
+  currentIndex = 0;
+  animationDirection: 'left' | 'right' = 'left';
 
   constructor(private fotografiasService: FotografiasService, private route: ActivatedRoute) {
     this.url = GLOBAL.url + 'fotografias' + '/get-foto/'

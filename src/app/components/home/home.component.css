@@ -22,6 +22,7 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
+  overflow: hidden;
 }
 
 
@@ -97,6 +98,7 @@
 
 .login:hover {
   transform: scale(1.2);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .content-arrow-nav {
@@ -108,6 +110,7 @@
   transform: translateY(-50%);
   z-index: 3;
   display: flex;
+  overflow: hidden;
 }
 
 .content-arrow-nav mat-icon {
@@ -115,16 +118,19 @@
   width: 60px;
   height: 60px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .content-arrow-nav div {
   position: absolute;
   color: rgb(15, 70, 216);
   transition: all .2s linear;
+  overflow: hidden;
 }
 
 .content-arrow-nav div:hover {
   color: rgb(113, 170, 216);
+  overflow: hidden;
 }
 
 .move-left {
@@ -185,12 +191,12 @@
 }
 
 .compartir *{
-  margin: 5px;
+  margin: 10px;
 }
 
 .compartir img{
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
 }
 
 .compartir div {
@@ -224,3 +230,5 @@
   color: #fff;
   margin: auto;
 }
+
+

@@ -1,8 +1,6 @@
 <div class="content-home">
-  <div class="fotografia" *ngFor="let foto of fotografias">
+  <div class="fotografia" *ngFor="let foto of fotografias" [@slideAnimation]="direccion">
     <div class="fotografia-item"
-    style="opacity: 1;"
-    [@slideAnimation]="direccion"
     *ngIf="fotoSeleccionada.fotografia.numero==foto.numero"
     [style.background-image]="'url(' + url + foto.imagen +'/false)'"
     [class.active]="foto.numero === fotoActual">
@@ -31,18 +29,18 @@
   </div>
 </div>
 
-<div class="ver-mas" *ngIf="verMas" >
+<div class="ver-mas" [@verMasAnimation] *ngIf="verMas" >
   <div class="ver-mas-detalle col-lg-6 col-md-6 col-xs-10">
-    <div class="ver-mas-nombre">
+    <div class="ver-mas-nombre detalle">
       {{fotoSeleccionada.fotografia.nombre}}
     </div>
-    <div class="ver-mas-descripcion">
+    <div class="ver-mas-descripcion detalle">
       {{fotoSeleccionada.fotografia.descripcion}}
     </div>
-    <div class="ver-mas-autor">
+    <div class="ver-mas-autor detalle">
       {{fotoSeleccionada.fotografia.autor}}
     </div>
-    <div class="compartir">
+    <div class="compartir detalle">
       <div class="instagram">
         <img src="../../../assets/images/instagram_64.png" alt="">
       </div>
