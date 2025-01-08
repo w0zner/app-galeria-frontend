@@ -1,0 +1,8 @@
+<div class="item-thumb" [style.background-image]="'url(' + url + foto.imagen +'/true)'">
+  <div class="detalle">
+    <div class="linea"></div>
+    <div class="numero">{{foto.numero}}</div>
+    <div class="autor">{{foto.autor}}</div>
+  </div>
+  <div *ngIf="fotoSeleccionada != foto" class="item-thumb-hover"></div>
+</div>

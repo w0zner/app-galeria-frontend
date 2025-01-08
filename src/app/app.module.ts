@@ -17,6 +17,7 @@ import { ListComponent } from './components/list/list.component';
 import { FotografiaFormComponent } from './components/fotografia-form/fotografia-form.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { PhotoSliderComponent } from './components/photo-slider/photo-slider.component';
+import { ThumbComponent } from './components/thumb/thumb.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PhotoSliderComponent } from './components/photo-slider/photo-slider.com
     AdminComponent,
     ListComponent,
     FotografiaFormComponent,
-    PhotoSliderComponent
+    PhotoSliderComponent,
+    ThumbComponent
   ],
   imports: [
     BrowserModule,

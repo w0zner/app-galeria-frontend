@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   direccion: any | null
   currentIndex = 0;
   animationDirection: 'left' | 'right' = 'left';
+  show_thumbs: boolean = false
 
   constructor(private fotografiasService: FotografiasService, private route: ActivatedRoute) {
     this.url = GLOBAL.url + 'fotografias' + '/get-foto/'

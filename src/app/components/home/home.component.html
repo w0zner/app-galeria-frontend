@@ -53,3 +53,20 @@
     <mat-icon>close</mat-icon>
   </div>
 </div>
+
+<!-- THUMBS -->
+<div class="show-thumbs" (click)="show_thumbs=!show_thumbs">
+  <mat-icon *ngIf="!show_thumbs">menu</mat-icon>
+  <mat-icon *ngIf="show_thumbs">close</mat-icon>
+</div>
+
+<div class="content-thumbs" *ngIf="show_thumbs">
+  <div class="numero-fotografia col-lg-3 col-md-4 col-sm-6">
+    <div>
+      {{fotoSeleccionada.fotografia.numero}}
+    </div>
+  </div>
+  <div class="thumb col-lg-3 col-md-4 col-sm-6" *ngFor="let thumb of fotografias">
+    <app-thumb [foto]="thumb" [fotoSeleccionada]="fotoSeleccionada.fotografia"></app-thumb>
+  </div>
+</div>

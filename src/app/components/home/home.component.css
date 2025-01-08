@@ -231,4 +231,58 @@
   margin: auto;
 }
 
+.show-thumbs {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 6;
+  color: #fff;
+  background: #333;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.show-thumbs mat-icon {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+
+.content-thumbs {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}
+
+.numero-fotografia {
+  color: #fff;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.numero-fotografia div {
+  font-family: 'Roboto-bold';
+  font-size: 100px;
+  margin: auto;
+}
+
+.thumb {
+  height: 220px;
+  display: block;
+  padding: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+}
 
