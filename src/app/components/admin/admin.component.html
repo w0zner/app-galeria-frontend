@@ -2,12 +2,18 @@
   <div class="home" [routerLink]="['/home/1']">
     <mat-icon>home</mat-icon>
   </div>
+  <div class="profile">
+    <mat-icon>account_box</mat-icon>
+    <span><b>Usuario: </b> {{user.usuario}}</span>
+  </div>
+  <div class="datos">
+
+  </div>
 
   <div class="opciones-usuario">
-    <div class="datos">
 
-    </div>
     <div class="logout" (click)="logout()">
+      <!-- <mat-icon> directions_run</mat-icon>  -->
       Cerrar sesión
     </div>
   </div>

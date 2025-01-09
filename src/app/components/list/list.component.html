@@ -3,7 +3,7 @@
     <mat-icon>add</mat-icon>
   </div>
 </div>
-<div class="content">
+<div class="content" [@listadoAnimations]="fotografias">
   <div class="grilla col-lg-2 col-md-3 col-sm-4" *ngFor="let foto of fotografias">
     <div class="content-fotografia" [ngClass]="foto.activo==false?'content-fotografia-disabled':''">
       <div class="fotografia" [style.background-image]="'url(' + url + foto.imagen +'/true)'">

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Animations } from 'src/app/animations/animations';
 import { FotografiasService } from 'src/app/services/fotografias.service';
 import { GLOBAL } from 'src/app/services/global';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+  animations: [Animations]
 })
 export class ListComponent implements OnInit {
 

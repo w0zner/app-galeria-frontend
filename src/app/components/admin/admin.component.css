@@ -28,7 +28,7 @@
   padding-right: 25px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .logout:hover {
@@ -46,7 +46,10 @@
 }
 
 .home {
-  margin: auto auto auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 5px auto 20px;
   cursor: pointer;
   opacity: .6;
   transition: all .2s linear;
@@ -54,4 +57,26 @@
 
 .home:hover {
   opacity: 1;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: auto auto auto 20px;
+  cursor: pointer;
+  opacity: .6;
+  transition: all .2s linear;
+}
+
+.profile:hover {
+  opacity: 1;
+}
+
+.profile p {
+  margin: auto auto auto 40px;
+  cursor: pointer;
+  opacity: .6;
+  transition: all .2s linear;
 }

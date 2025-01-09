@@ -1,5 +1,11 @@
 <div class="content col-lg-6 col-md-4 col-sm-6 col-xs-12">
+<!--   <div class="volver" [routerLink]="['/admin/list']">
+    <h2>« Volver</h2>
+  </div>
+  <hr>-->
   <h2>Agregar Fotografía</h2>
+  <hr>
+  <hr>
   <form [formGroup]="fotografiaForm" (submit)="guardar()">
     <mat-form-field class="col-xs-12">
       <input matInput type="text" formControlName="nombre" required autofocus placeholder="Nombre">
@@ -31,8 +37,8 @@
     </div>
 
     <div class="button-container">
-      <button mat-raised-button color="default" type="button" [routerLink]="['/admin/list']">Cancelar</button>
-      <button mat-raised-button color="primary" type="submit" [disabled]="fotografiaForm.invalid">Guardar</button>
+      <button mat-raised-button color="default" type="button" [routerLink]="['/admin/list']"><mat-icon>block</mat-icon>Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="fotografiaForm.invalid"> <mat-icon>done</mat-icon>Guardar</button>
     </div>
 
 

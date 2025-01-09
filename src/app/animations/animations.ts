@@ -93,6 +93,26 @@ export const Animations = [
         ]))
       ])
     ])
+  ]),
+  trigger('listadoAnimations', [
+    transition('* => *', [
+      query('.grilla', style({transform: 'translateY(30px)', opacity: 0}), { optional: true }),
+      query('.grilla', stagger(20, [
+        animate('300ms', style('*'))
+      ]), { optional: true })
+    ])
+  ]),
+  trigger('adminComponentAnimations', [
+    transition(':enter', [
+      query('.options', style({height: '0px'})),
+      query('.options', animate('400ms 100ms', style('*')))
+    ]),
+    transition(':leave', [
+      query('.content', stagger(20, [
+        animate('400ms', style({transform: 'translateY(40px)', opacity:0}))
+      ])),
+      query('.options', animate('400ms 100ms', style({height: '0px'})))
+    ])
   ])
 ]
 
