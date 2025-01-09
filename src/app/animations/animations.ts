@@ -64,6 +64,35 @@ export const Animations = [
           animate('600ms ease-out', style('*'))
         ])),
     ]),
+  ]),
+  trigger('menuThumbsAnimation', [
+    transition('void => *', [
+      style({background: 'rgba(51,51,51,0)'}),
+      query('.item-thumb', style({transform: 'translateY(100%)'})),
+      query('.detalle-thumb', style({ left: '-50px'})),
+      query('.numero-fotografia', style({opacity: 0, transform: 'scale(0)'})),
+      query('.item-seleccionado', style({transform: 'translateY(-100%)'})),
+      animate('300ms', style('*')),
+      group([
+        query('.item-thumb', stagger(110, [
+          animate('400ms 100ms ease-in', style('*'))
+        ])),
+        query('.detalle-thumb', stagger(110, [
+          animate('400ms 600ms ease-in', style('*'))
+        ])),
+        query('.numero-fotografia', animate('300ms ease-in', style('*'))),
+        query('.item-seleccionado', animate('800ms 100ms ease-in', style('*')))
+      ])
+    ]),
+    transition('* => void', [
+      group([
+        animate('200ms 300ms', style({opacity: 0})),
+        query('.numero-fotografia', animate('300ms ease-out', style({opacity: 0, transform: 'scale(0)'}))),
+        query('.item-thumb', stagger(50, [
+          animate('400ms 100ms ease-out', style({transform: 'translateY(100%)'}))
+        ]))
+      ])
+    ])
   ])
 ]
 

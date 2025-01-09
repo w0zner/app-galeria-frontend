@@ -9,6 +9,18 @@
   background-position: center center;
 }
 
+.item-seleccionado {
+  border: 1px solid #fff;
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .item-thumb-hover {
   position: absolute;
   left: 0px;
@@ -19,7 +31,7 @@
   transition: all .2s linear;
 }
 
-.detalle {
+.detalle-thumb {
   position: absolute;
   left: 0px;
   right: 0px;

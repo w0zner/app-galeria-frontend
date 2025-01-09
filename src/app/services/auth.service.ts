@@ -65,6 +65,14 @@ export class AuthService {
     return JSON.parse(localStorage.getItem('token') || '')
   }
 
+  getUserLogged() {
+    let user = null
+    if(localStorage.getItem('user')){
+      user = JSON.parse(localStorage.getItem('user') || '')
+    }
+    return user
+  }
+
   logout() {
     try {
       localStorage.removeItem('user')

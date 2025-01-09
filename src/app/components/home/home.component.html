@@ -14,7 +14,8 @@
         </div>
         <div class="txt-leer-mas">Leer más</div>
         <div class="linea-inferior"></div>
-        <div class="login" [routerLink]="['/login']">Login</div>
+        <div class="login" *ngIf="!user" [routerLink]="['/login']">Login</div>
+        <div class="login" *ngIf="user" [routerLink]="['/admin/list']">{{user.usuario}}</div>
       </div>
     </div>
   </div>
@@ -55,12 +56,12 @@
 </div>
 
 <!-- THUMBS -->
-<div class="show-thumbs" (click)="show_thumbs=!show_thumbs">
+<div class="show-thumbs" (click)="show_thumbs=!show_thumbs" >
   <mat-icon *ngIf="!show_thumbs">menu</mat-icon>
   <mat-icon *ngIf="show_thumbs">close</mat-icon>
 </div>
 
-<div class="content-thumbs" *ngIf="show_thumbs">
+<div class="content-thumbs" *ngIf="show_thumbs" [@menuThumbsAnimation]>
   <div class="numero-fotografia col-lg-3 col-md-4 col-sm-6">
     <div>
       {{fotoSeleccionada.fotografia.numero}}

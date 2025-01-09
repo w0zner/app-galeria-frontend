@@ -1,5 +1,7 @@
-<div class="item-thumb" [style.background-image]="'url(' + url + foto.imagen +'/true)'">
-  <div class="detalle">
+<div [ngClass]="fotoSeleccionada == foto?'item-seleccionado':'item-thumb'"
+[routerLink]="['/home/', foto.numero]"
+[style.background-image]="'url(' + url + foto.imagen +'/true)'">
+  <div class="detalle-thumb">
     <div class="linea"></div>
     <div class="numero">{{foto.numero}}</div>
     <div class="autor">{{foto.autor}}</div>

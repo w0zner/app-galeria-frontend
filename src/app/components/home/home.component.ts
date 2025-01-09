@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Animations } from 'src/app/animations/animations';
+import { AuthService } from 'src/app/services/auth.service';
 import { FotografiasService } from 'src/app/services/fotografias.service';
 import { GLOBAL } from 'src/app/services/global';
 
@@ -11,6 +12,7 @@ import { GLOBAL } from 'src/app/services/global';
   animations: [Animations]
 })
 export class HomeComponent implements OnInit {
+  user: any = null;
   fotografias: any[] = []
   url: string=''
   fotoSeleccionada: any = {}
@@ -22,11 +24,17 @@ export class HomeComponent implements OnInit {
   animationDirection: 'left' | 'right' = 'left';
   show_thumbs: boolean = false
 
-  constructor(private fotografiasService: FotografiasService, private route: ActivatedRoute) {
+  constructor(private fotografiasService: FotografiasService, private authService: AuthService, private route: ActivatedRoute, private router: Router) {
     this.url = GLOBAL.url + 'fotografias' + '/get-foto/'
   }
 
   ngOnInit(): void {
+    this.user = this.authService.getUserLogged()
+
+    if(this.user) {
+      console.log(this.user.usuario)
+    }
+
     this.route.params.subscribe(params => {
       this.num = params['num']
       console.log(this.num)
@@ -69,6 +77,7 @@ export class HomeComponent implements OnInit {
   }
 
   moverFotografia(fotografia: any) {
+    this.show_thumbs = false
     if(fotografia.numero > this.fotoActual){
       this.direccion="right"
     } else if(fotografia.numero < this.fotoActual){
@@ -79,6 +88,7 @@ export class HomeComponent implements OnInit {
     }
 
     this.fotoActual=fotografia.numero
+    this.router.navigate(['/home/', this.fotoActual])
   }
 
 }
