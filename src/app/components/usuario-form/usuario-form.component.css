@@ -1,0 +1,16 @@
+.content{
+  background: #eee;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  display: flex; /* Añadido */
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+
+.button-container {
+  margin: 40px 10px;
+
+  gap: 16px; /* Espacio entre los botones */
+}

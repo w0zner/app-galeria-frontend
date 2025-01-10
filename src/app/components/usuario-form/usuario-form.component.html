@@ -1,0 +1,25 @@
+<div class="content col-lg-6 col-md-4 col-sm-6 col-xs-12">
+    <h2>Usuario</h2>
+
+    <form [formGroup]="usuarioForm" (submit)="guardar()">
+      <mat-form-field class="col-xs-12">
+        <input matInput type="text" formControlName="usuario" required autofocus placeholder="Nombre">
+        <mat-error *ngIf="usuarioForm.get('usuario')?.hasError('required')">
+          El nombre de usuario es requerido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-xs-12">
+        <input matInput type="password" formControlName="password"  placeholder="Password">
+      </mat-form-field>
+
+      <mat-form-field class="col-xs-12">
+        <input matInput type="text" value="USER" formControlName="rol" placeholder="Rol" readonly="true">
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button color="default" type="button" [routerLink]="['/admin/list']"><mat-icon>block</mat-icon>Cancelar</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="usuarioForm.invalid"> <mat-icon>done</mat-icon>Guardar</button>
+      </div>
+    </form>
+  </div>

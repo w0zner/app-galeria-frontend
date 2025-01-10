@@ -76,7 +76,7 @@
 }
 
 .linea-inferior {
-  margin: auto auto auto 0px;
+  margin: auto 10px auto 5px;
   height: 1px;
   position: absolute;
   left: 120px;
@@ -94,6 +94,7 @@
   transition: all .2s linaer;
   font-family: 'Roboto-ThinItalic';
   font-weight: bold;
+  margin-left: 80px;
 }
 
 .login:hover {

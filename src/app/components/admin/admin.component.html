@@ -2,7 +2,7 @@
   <div class="home" [routerLink]="['/home/1']">
     <mat-icon>home</mat-icon>
   </div>
-  <div class="profile">
+  <div class="profile" [routerLink]="['usuario/edit', user._id]">
     <mat-icon>account_box</mat-icon>
     <span><b>Usuario: </b> {{user.usuario}}</span>
   </div>
